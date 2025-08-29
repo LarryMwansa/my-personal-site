@@ -13,7 +13,8 @@ const geistMono = Geist_Mono({
 
 export const metadata = {
   title: "Larry Mwansa | Disruptors",
-  description: "Scepter Movement"
+  description: "The Scepter Movement",
+};
 
 export default function RootLayout({ children }) {
   return (
