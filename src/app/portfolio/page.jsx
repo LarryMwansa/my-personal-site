@@ -5,7 +5,7 @@ const PortfolioPage = () => {
   return (
     <div>
       <header>
-        <h1 className={styles.title}>My Portfolio</h1>
+        <h1 className={styles.title}>Selected Projects</h1>
         <p className={styles.description}>Welcome to my portfolio page!</p>
       </header>
       <section>
