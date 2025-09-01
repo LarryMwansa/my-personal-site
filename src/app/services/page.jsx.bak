@@ -1,0 +1,45 @@
+import React from 'react';
+import Link from 'next/link';
+import Image from 'next/image';
+import styles from './services.module.css';
+
+const ServicesPage = () => {
+  return (
+    <div className={styles.container}>
+      {/* Hero Section */}
+      <header className={styles.hero}>
+        <h1 className={styles.heroTitle}>Solutions Tailored to Your Needs</h1>
+        <p className={styles.heroSubtitle}>
+          Delivering expertise in technology, communications, and community impact 
+          to help your organization thrive in today's digital landscape
+        </p>
+      </header>
+      <section>
+        <div>
+          <h2>Software Development</h2>
+<p>Custom web applications, e-commerce platforms, and API integrations designed to scale with your business.</p>
+        </div>
+      </section>
+      <section>
+        <div>
+          <h2>Digital Strategy & Communications</h2>
+<p>SEO, social media campaigns, media outreach, and brand storytelling that connect with audiences.</p>
+        </div>
+      </section>
+      <section>
+        <div>
+          <h2>Training & Consulting</h2>
+<p>Hands-on workshops and guidance in web development, blockchain, and digital skills for teams and individuals.</p>
+        </div>
+      </section>
+      <section>
+         <div>
+          <h2>Let’s Discuss Your Project</h2>
+        </div>
+        <a href="/contact" class="btn-primary" title="Get in touch with Larry">Get Started</a>
+      </section>
+    </div>
+  )
+}
+
+export default ServicesPage

@@ -20,13 +20,30 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en">
+    <html lang="en" className="js-focus-visible" data-js-focus-visible>
       <body className={`${geistSans.variable} ${geistMono.variable}`}>
         <Nav/>
         <main>
         {children}
         </main>
         <Footer/>
+        {/* Script to prevent theme flash */}
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+              (function() {
+                try {
+                  var savedTheme = localStorage.getItem('theme');
+                  if (savedTheme && savedTheme !== 'system') {
+                    document.documentElement.setAttribute('data-theme', savedTheme);
+                  } else if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+                    document.documentElement.setAttribute('data-theme', 'dark');
+                  }
+                } catch (e) {}
+              })();
+            `
+          }}
+        />
       </body>
     </html>
   );

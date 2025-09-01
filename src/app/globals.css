@@ -1,29 +1,52 @@
+/* Base theme variables */
 :root {
   --background: #ffffff;
   --foreground: #171717;
   --accent: #2563eb;
   --border: #e5e7eb;
   --radius: 8px;
+  
+  /* Add more token variables as needed */
+  --card-bg: #f9fafb;
+  --card-border: #e5e7eb;
+  --card-hover: rgba(37, 99, 235, 0.08);
+  --card-hover-darker: rgba(37, 99, 235, 0.15);
+  --text-muted: #6b7280;
+  --success: #10b981;
+  --warning: #f59e0b;
+  --error: #ef4444;
 }
 
+/* Dark theme overrides - applied when data-theme="dark" is set */
 [data-theme="dark"] {
-  --background: #323131;
-  --foreground: #ededed;
+  --background: #1a1a1a;
+  --foreground: #f3f4f6;
+  --border: #374151;
+  --card-bg: #262626;
+  --card-border: #404040;
+  --card-hover: rgba(59, 130, 246, 0.15);
+  --card-hover-darker: rgba(59, 130, 246, 0.25);
+  --text-muted: #9ca3af;
 }
+
+/* Light theme overrides - applied when data-theme="light" is set */
 [data-theme="light"] {
   --background: #ffffff;
   --foreground: #171717;
+  --card-bg: #f9fafb;
+  --card-border: #e5e7eb;
+  --text-muted: #6b7280;
 }
 
+/* System preference - applied if no data-theme attribute is set */
 @media (prefers-color-scheme: dark) {
-  :root {
-    --background: #323131;
-    --foreground: #ededed;
-  }
-}
-
-@media (prefers-color-scheme: dark) {
-  html {
+  :root:not([data-theme]) {
+    --background: #1a1a1a;
+    --foreground: #f3f4f6;
+    --border: #374151;
+    --card-bg: #262626;
+    --card-border: #404040;
+    --text-muted: #9ca3af;
     color-scheme: dark;
   }
 }

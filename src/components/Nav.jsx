@@ -13,31 +13,67 @@ const themes = [
 ];
 
 function applyTheme(theme) {
-  if (theme === "system") {
-    document.documentElement.removeAttribute("data-theme");
-  } else {
-    document.documentElement.setAttribute("data-theme", theme);
+  if (typeof window !== "undefined") {
+    if (theme === "system") {
+      document.documentElement.removeAttribute("data-theme");
+    } else {
+      document.documentElement.setAttribute("data-theme", theme);
+    }
   }
 }
 
 function getInitialTheme() {
   if (typeof window === "undefined") return "system";
-  return localStorage.getItem("theme") || "system";
+  
+  // Try to get saved theme from localStorage
+  const savedTheme = localStorage.getItem("theme");
+  if (savedTheme) return savedTheme;
+  
+  // If no saved theme, check system preference
+  if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+    return "dark";
+  }
+  
+  return "light";
 }
 
 function ThemeToggle() {
-  const [theme, setTheme] = useState(getInitialTheme());
-
+  // Use a safer initialization approach with useState+useEffect
+  const [mounted, setMounted] = useState(false);
+  const [theme, setTheme] = useState('system'); // Default placeholder
+  
+  // Only run on client, not during SSR
   useEffect(() => {
-    applyTheme(theme);
-    localStorage.setItem("theme", theme);
-  }, [theme]);
+    setMounted(true);
+    setTheme(getInitialTheme());
+  }, []);
+  
+  // Apply theme effect
+  useEffect(() => {
+    if (mounted) {
+      applyTheme(theme);
+      localStorage.setItem("theme", theme);
+    }
+  }, [theme, mounted]);
+
+  // Handle theme change
+  const handleThemeChange = (e) => {
+    const newTheme = e.target.value;
+    setTheme(newTheme);
+  };
+  
+  // Don't render the actual select until client-side
+  if (!mounted) {
+    return <div className={styles.themeToggle}>
+      <div className={styles.themeSelect} style={{width: '90px', height: '35px'}}></div>
+    </div>;
+  }
 
   return (
     <div className={styles.themeToggle}>
       <select
         value={theme}
-        onChange={e => setTheme(e.target.value)}
+        onChange={handleThemeChange}
         aria-label="Theme mode"
         className={styles.themeSelect}
       >
