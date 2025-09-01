@@ -6,6 +6,15 @@
   --radius: 8px;
 }
 
+[data-theme="dark"] {
+  --background: #323131;
+  --foreground: #ededed;
+}
+[data-theme="light"] {
+  --background: #ffffff;
+  --foreground: #171717;
+}
+
 @media (prefers-color-scheme: dark) {
   :root {
     --background: #323131;

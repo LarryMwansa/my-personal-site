@@ -15,14 +15,14 @@ export default function Home() {
         <div>
           <a
             href="/portfolio"
-            class="btn-primary"
+            className="btn-primary"
             title="Explore Larry's Projects"
           >
             Explore My Work
           </a>
           <a
             href="/contact"
-            class="btn-secondary"
+            className="btn-secondary"
             title="Get in Touch with Larry"
           >
             Connect With Me
@@ -34,7 +34,7 @@ export default function Home() {
           <h2>Skills Snapshot</h2>
           <p>Technical expertise and soft skills that drive results.</p>
         </div>
-        <div class="skills">
+  <div className="skills">
           <span title="Python – Backend development & automation">Python</span>
           <span title="JavaScript – Frontend and dynamic web apps">
             JavaScript

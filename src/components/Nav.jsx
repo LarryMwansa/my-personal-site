@@ -5,6 +5,7 @@ import Link from "next/link";
 import Image from "next/image";
 import styles from "./Nav.module.css";
 
+// Theme toggle logic and component
 const themes = [
   { value: "system", label: "System" },
   { value: "light", label: "Light" },
@@ -40,143 +41,6 @@ function ThemeToggle() {
         aria-label="Theme mode"
         className={styles.themeSelect}
       >
-        "use client";
-
-        import { useState, useEffect } from "react";
-        import Link from "next/link";
-        import Image from "next/image";
-        import styles from "./Nav.module.css";
-
-        const themes = [
-          { value: "system", label: "System" },
-          { value: "light", label: "Light" },
-          { value: "dark", label: "Dark" },
-        ];
-
-        function applyTheme(theme) {
-          if (theme === "system") {
-            document.documentElement.removeAttribute("data-theme");
-          } else {
-            document.documentElement.setAttribute("data-theme", theme);
-          }
-        }
-
-        function getInitialTheme() {
-          if (typeof window === "undefined") return "system";
-          return localStorage.getItem("theme") || "system";
-        }
-
-        function ThemeToggle() {
-          const [theme, setTheme] = useState(getInitialTheme());
-
-          useEffect(() => {
-            applyTheme(theme);
-            localStorage.setItem("theme", theme);
-          }, [theme]);
-
-          return (
-            <div className={styles.themeToggle}>
-              <select
-                value={theme}
-                onChange={e => setTheme(e.target.value)}
-                aria-label="Theme mode"
-                className={styles.themeSelect}
-              >
-                {themes.map(opt => (
-                  <option key={opt.value} value={opt.value}>{opt.label}</option>
-                ))}
-              </select>
-            </div>
-          );
-        }
-
-        export default function Nav() {
-          const [isMenuOpen, setIsMenuOpen] = useState(false);
-
-          const toggleMenu = () => {
-            setIsMenuOpen(!isMenuOpen);
-          };
-
-          const closeMenu = () => {
-            setIsMenuOpen(false);
-          };
-
-          return (
-            <nav className={styles.navigation}>
-              <div className={styles.container}>
-                <div className={styles.nav}>
-                  {/* Logo */}
-                  <Link href="/" className={styles.logo} onClick={closeMenu}>
-                    <div className={styles.logoContainer}>
-                      <Image 
-                        src="/logo.svg" 
-                        alt="Larry Mwansa Profile Logo" 
-                        className={styles.logoImage}
-                        width={120}
-                        height={120}
-                      />
-                      <span className={styles.logoFallback}>Larry Mwansa</span>
-                    </div>
-                  </Link>
-
-                  {/* Desktop Navigation */}
-                  <nav className={styles.desktopNav}>
-                    <Link href="/about" className={styles.navLink}>
-                      About
-                    </Link>
-                    <Link href="/services" className={styles.navLink}>
-                      Services
-                    </Link>
-                    <Link href="/portfolio" className={styles.navLink}>
-                      Portfolio
-                    </Link>
-                    <Link href="/contact" className={styles.navLink}>
-                      Contact
-                    </Link>
-                    <Link href="/register" className={styles.getStartedBtn}>
-                      Get Started
-                    </Link>
-                    <ThemeToggle />
-                  </nav>
-          </nav>
-// ThemeToggle component
-import { useEffect } from 'react';
-
-const themes = [
-  { value: 'system', label: 'System' },
-  { value: 'light', label: 'Light' },
-  { value: 'dark', label: 'Dark' },
-];
-
-function applyTheme(theme) {
-  if (theme === 'system') {
-    document.documentElement.removeAttribute('data-theme');
-  } else {
-    document.documentElement.setAttribute('data-theme', theme);
-  }
-}
-
-function getInitialTheme() {
-  if (typeof window === 'undefined') return 'system';
-  return localStorage.getItem('theme') || 'system';
-}
-
-function ThemeToggle() {
-  const [theme, setTheme] = useState(getInitialTheme());
-
-  useEffect(() => {
-    applyTheme(theme);
-    localStorage.setItem('theme', theme);
-  }, [theme]);
-
-  return (
-    <div className={styles.themeToggle}>
-      <select
-        value={theme}
-        onChange={e => setTheme(e.target.value)}
-        aria-label="Theme mode"
-        className={styles.themeSelect}
-      >
         {themes.map(opt => (
           <option key={opt.value} value={opt.value}>{opt.label}</option>
         ))}
@@ -184,6 +48,55 @@ function ThemeToggle() {
     </div>
   );
 }
+
+export default function Nav() {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+  const toggleMenu = () => {
+    setIsMenuOpen(!isMenuOpen);
+  };
+
+  const closeMenu = () => {
+    setIsMenuOpen(false);
+  };
+
+  return (
+    <nav className={styles.navigation}>
+      <div className={styles.container}>
+        <div className={styles.nav}>
+          {/* Logo */}
+          <Link href="/" className={styles.logo} onClick={closeMenu}>
+            <div className={styles.logoContainer}>
+              <Image 
+                src="/logo.svg" 
+                alt="Larry Mwansa Profile Logo" 
+                className={styles.logoImage}
+                width={120}
+                height={120}
+              />
+              <span className={styles.logoFallback}>Larry Mwansa</span>
+            </div>
+          </Link>
+
+          {/* Desktop Navigation */}
+          <nav className={styles.desktopNav}>
+            <Link href="/about" className={styles.navLink}>
+              About
+            </Link>
+            <Link href="/services" className={styles.navLink}>
+              Services
+            </Link>
+            <Link href="/portfolio" className={styles.navLink}>
+              Portfolio
+            </Link>
+            <Link href="/contact" className={styles.navLink}>
+              Contact
+            </Link>
+            <Link href="/register" className={styles.getStartedBtn}>
+              Get Started
+            </Link>
+            <ThemeToggle />
+          </nav>
 
           {/* Mobile Menu Button */}
           <button
