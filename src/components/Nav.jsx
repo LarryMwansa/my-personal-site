@@ -3,9 +3,9 @@
 import { useState } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
-import styles from './Header.module.css';
+import styles from './Nav.module.css';
 
-export default function Header() {
+export default function Nav() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const toggleMenu = () => {
@@ -17,7 +17,7 @@ export default function Header() {
   };
 
   return (
-    <header className={styles.header}>
+    <nav className={styles.navigation}>
       <div className={styles.container}>
         <div className={styles.nav}>
           {/* Logo */}
@@ -94,6 +94,6 @@ export default function Header() {
           </>
         )}
       </div>
-    </header>
+    </nav>
   );
 }

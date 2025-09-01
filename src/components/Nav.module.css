@@ -10,7 +10,7 @@
   }
 }
 
-.header {
+.navigation {
   background: var(--background);
   backdrop-filter: blur(20px) saturate(180%);
   -webkit-backdrop-filter: blur(20px) saturate(180%);
