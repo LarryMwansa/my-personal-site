@@ -44,11 +44,11 @@ export default function Footer() {
           <div className={styles.footerSection}>
             <h4>Services</h4>
             <ul className={styles.footerLinks}>
-              <li><Link href="/services/custom-webapp" className={styles.footerLink}>Custom Web App</Link></li>
-              <li><Link href="/services/mobile-app" className={styles.footerLink}>Mobile App</Link></li>
-              <li><Link href="/services/devops-infrastructure" className={styles.footerLink}>DevOps & Infrastructure</Link></li>
-              <li><Link href="/services/innovation-consulting" className={styles.footerLink}>Innovation Consulting</Link></li>
-              <li><Link href="/services/startup-incubator" className={styles.footerLink}>Startup Incubator</Link></li>
+              <li><Link href="/services" className={styles.footerLink}>All Services</Link></li>
+              <li><Link href="/portfolio" className={styles.footerLink}>Portfolio</Link></li>
+              <li><a href="https://www.bwanji.digital/" target="_blank" rel="noopener noreferrer" className={styles.footerLink}>Bwanji Digital</a></li>
+              <li><a href="https://www.techcon.tech/" target="_blank" rel="noopener noreferrer" className={styles.footerLink}>TechCon</a></li>
+              <li><a href="https://www.uaba.io/" target="_blank" rel="noopener noreferrer" className={styles.footerLink}>UABA</a></li>
             </ul>
           </div>
 
@@ -56,9 +56,9 @@ export default function Footer() {
           <div className={styles.footerSection}>
             <h4>Company</h4>
             <ul className={styles.footerLinks}>
-              <li><Link href="/about" className={styles.footerLink}>About Us</Link></li>
-              <li><Link href="/resources" className={styles.footerLink}>Resources</Link></li>
-              <li><Link href="/startup-incubator" className={styles.footerLink}>Startup Incubator</Link></li>
+              <li><Link href="/about" className={styles.footerLink}>About</Link></li>
+              <li><Link href="/blog" className={styles.footerLink}>Insights</Link></li>
+              <li><a href="https://www.amc.cx/" target="_blank" rel="noopener noreferrer" className={styles.footerLink}>AMC</a></li>
               <li><Link href="/contact" className={styles.footerLink}>Contact</Link></li>
             </ul>
           </div>
@@ -68,9 +68,9 @@ export default function Footer() {
             <h4>Support</h4>
             <ul className={styles.footerLinks}>
               <li><Link href="/contact?subject=Help Request" className={styles.footerLink}>Help Center</Link></li>
-              <li><Link href="/resources" className={styles.footerLink}>Resources</Link></li>
               <li><Link href="/contact?subject=Terms of Service" className={styles.footerLink}>Terms of Service</Link></li>
               <li><Link href="/contact?subject=Privacy Policy" className={styles.footerLink}>Privacy Policy</Link></li>
+              <li><a href="https://github.com/LarryMwansa/bwanji_base" target="_blank" rel="noopener noreferrer" className={styles.footerLink}>GitHub Repo</a></li>
             </ul>
           </div>
         </div>

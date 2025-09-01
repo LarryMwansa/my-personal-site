@@ -14,6 +14,17 @@
   color: var(--color-accent, #231F20);
   margin-bottom: 0.5rem;
 }
+
+@media (prefers-color-scheme: dark) {
+  .title {
+    color: var(--color-accent, #fff);
+  }
+}
+
+:root[data-theme="dark"] .title {
+  color: var(--color-accent, #fff);
+}
+
 .subtitle {
   font-size: 1.2rem;
   color: var(--color-text-secondary, #555);
@@ -111,4 +122,106 @@
 }
 .ctaButton:hover {
   background: var(--color-primary, #0070f3);
+}
+
+/* Featured Articles Grid */
+.featuredGrid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+  margin-bottom: 2.5rem;
+}
+@media (min-width: 700px) {
+  .featuredGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+.featuredCard {
+  display: flex;
+  flex-direction: column;
+  background: var(--color-bg-secondary, #f7f7f7);
+  border-radius: 14px;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.06);
+  overflow: hidden;
+  transition: box-shadow 0.2s, transform 0.2s;
+}
+.featuredCard:hover, .featuredCard:focus {
+  box-shadow: 0 8px 32px rgba(0,112,243,0.10);
+  transform: translateY(-4px) scale(1.02);
+}
+.featuredImage {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  background: #eee;
+}
+.featuredContent {
+  padding: 1.5rem 1.2rem;
+}
+.metaRow {
+  display: flex;
+  align-items: center;
+  gap: 0.7rem;
+  font-size: 0.95rem;
+  color: var(--color-text-secondary, #555);
+  margin-bottom: 0.5rem;
+}
+.authorAvatar {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid var(--color-accent, #231F20);
+}
+.authorName {
+  font-weight: 500;
+  color: var(--color-accent, #231F20);
+}
+.articleDate, .readTime {
+  font-size: 0.9rem;
+  color: var(--color-text-secondary, #888);
+}
+.tagsRow {
+  margin-bottom: 0.7rem;
+}
+.tag {
+  display: inline-block;
+  background: var(--color-primary, #0070f3);
+  color: #fff;
+  font-size: 0.85rem;
+  font-weight: 500;
+  border-radius: 4px;
+  padding: 0.2rem 0.7rem;
+  margin-right: 0.5rem;
+  margin-bottom: 0.2rem;
+}
+
+/* Regular Article Card Image */
+.articleImage {
+  width: 100%;
+  height: 120px;
+  object-fit: cover;
+  border-radius: 8px;
+  background: #eee;
+  margin-bottom: 0.7rem;
+}
+
+/* Responsive tweaks for article cards */
+@media (max-width: 600px) {
+  .articlesGrid {
+    grid-template-columns: 1fr;
+  }
+  .featuredGrid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Focus states for accessibility */
+.articleCard:focus-within, .featuredCard:focus-within {
+  outline: 2px solid var(--color-primary, #0070f3);
+  outline-offset: 2px;
+}
+.readMore:focus {
+  color: var(--color-primary, #0070f3);
+  outline: none;
 }

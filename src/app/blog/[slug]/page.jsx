@@ -1,6 +1,4 @@
-import React from 'react';
-import { useRouter } from 'next/router';
-import styles from './[slug].module.css';
+import styles from '../blog.module.css';
 
 const articles = {
   'building-websites-that-connect-communities': {
@@ -17,7 +15,7 @@ const articles = {
   }
 };
 
-const BlogPost = ({ params }) => {
+export default function BlogPost({ params }) {
   const { slug } = params;
   const article = articles[slug];
 
@@ -31,6 +29,4 @@ const BlogPost = ({ params }) => {
       <div className={styles.content}>{article.content}</div>
     </div>
   );
-};
-
-export default BlogPost;
+}
