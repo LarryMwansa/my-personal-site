@@ -19,7 +19,7 @@
 
 /* Dark theme overrides - applied when data-theme="dark" is set */
 [data-theme="dark"] {
-  --background: #1a1a1a;
+  --background: #171717;
   --foreground: #f3f4f6;
   --border: #374151;
   --card-bg: #262626;
