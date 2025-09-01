@@ -1,0 +1,114 @@
+.container {
+  max-width: 900px;
+  margin: 90px auto;
+  padding: 2rem 1rem;
+}
+
+.hero {
+  text-align: center;
+  margin-bottom: 2.5rem;
+}
+.title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: var(--color-accent, #231F20);
+  margin-bottom: 0.5rem;
+}
+.subtitle {
+  font-size: 1.2rem;
+  color: var(--color-text-secondary, #555);
+  margin-bottom: 0.5rem;
+}
+
+.sectionTitle {
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: var(--color-accent, #231F20);
+  margin-bottom: 1.2rem;
+  text-align: center;
+}
+
+.pillarsSection {
+  margin-bottom: 2.5rem;
+}
+.pillarsGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1.5rem;
+}
+.pillarCard {
+  background: var(--color-bg-secondary, #f7f7f7);
+  border-radius: 10px;
+  padding: 1.2rem 1rem;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+  text-align: center;
+}
+.pillarTitle {
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  color: var(--color-accent, #231F20);
+}
+.pillarDesc {
+  font-size: 1rem;
+  color: var(--color-text-secondary, #555);
+}
+
+.articlesSection {
+  margin-bottom: 2.5rem;
+}
+.articlesGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1.5rem;
+}
+.articleCard {
+  background: var(--color-bg-secondary, #f7f7f7);
+  border-radius: 10px;
+  padding: 1.2rem 1rem;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.articleTitle {
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  color: var(--color-accent, #231F20);
+}
+.articleExcerpt {
+  font-size: 1rem;
+  color: var(--color-text-secondary, #555);
+  margin-bottom: 0.8rem;
+}
+.readMore {
+  color: var(--color-accent, #231F20);
+  font-weight: 500;
+  text-decoration: underline;
+  margin-top: auto;
+  transition: color 0.2s;
+}
+.readMore:hover {
+  color: var(--color-primary, #0070f3);
+}
+
+.ctaSection {
+  text-align: center;
+  margin-top: 2.5rem;
+}
+.ctaButton {
+  background: var(--color-accent, #231F20);
+  color: #fff;
+  font-size: 1.1rem;
+  font-weight: 600;
+  padding: 0.8rem 2rem;
+  border-radius: 6px;
+  text-decoration: none;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+  transition: background 0.2s;
+  display: inline-block;
+}
+.ctaButton:hover {
+  background: var(--color-primary, #0070f3);
+}

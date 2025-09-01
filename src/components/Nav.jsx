@@ -152,6 +152,9 @@ export default function Nav() {
             <Link href="/portfolio" className={styles.navLink}>
               Portfolio
             </Link>
+            <Link href="/blog" className={styles.navLink}>
+              Insights
+            </Link>
             <Link href="/contact" className={styles.navLink}>
               Contact
             </Link>
@@ -190,6 +193,9 @@ export default function Nav() {
                 </Link>
                 <Link href="/portfolio" className={styles.mobileNavLink} onClick={closeMenu}>
                   Portfolio
+                </Link>
+                <Link href="/blog" className={styles.mobileNavLink} onClick={closeMenu}>
+                  Insights
                 </Link>
                 <Link href="/contact" className={styles.mobileNavLink} onClick={closeMenu}>
                   Contact
