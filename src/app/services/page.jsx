@@ -90,27 +90,33 @@ const ServicesPage = () => {
         <h2 className={styles.processTitle}>My Process</h2>
         <div className={styles.processList}>
           <div className={styles.processStep}>
-            <h3 className={styles.stepTitle}>Discovery</h3>
+            <h3 className={styles.stepTitle}>1. Registration & Onboarding</h3>
             <p className={styles.stepText}>
-              I start by understanding your goals, challenges, and vision to create a tailored approach.
+              Create your account and share your business goals. This step ensures we understand your needs from the start.
             </p>
           </div>
           <div className={styles.processStep}>
-            <h3 className={styles.stepTitle}>Strategy</h3>
+            <h3 className={styles.stepTitle}>2. Service Selection & Consultation</h3>
             <p className={styles.stepText}>
-              Creating a detailed roadmap that aligns with your business objectives and technical requirements.
+              Choose from available solutions or request a custom service. Book a consultation to discuss your requirements and vision in detail.
             </p>
           </div>
           <div className={styles.processStep}>
-            <h3 className={styles.stepTitle}>Implementation</h3>
+            <h3 className={styles.stepTitle}>3. Project Planning & Interview</h3>
             <p className={styles.stepText}>
-              Bringing the strategy to life with transparent communication and regular progress updates.
+              We conduct a thorough interview to clarify objectives, then develop a tailored roadmap and strategy for your project.
             </p>
           </div>
           <div className={styles.processStep}>
-            <h3 className={styles.stepTitle}>Refinement</h3>
+            <h3 className={styles.stepTitle}>4. Development & Updates</h3>
             <p className={styles.stepText}>
-              Continuous improvement based on feedback, analytics, and emerging opportunities.
+              Your solution is built with regular progress updates and transparent communication throughout the process.
+            </p>
+          </div>
+          <div className={styles.processStep}>
+            <h3 className={styles.stepTitle}>5. Launch & Ongoing Support</h3>
+            <p className={styles.stepText}>
+              Go live with your project and receive ongoing support, maintenance, and opportunities for continuous improvement.
             </p>
           </div>
         </div>
