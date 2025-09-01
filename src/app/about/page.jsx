@@ -75,11 +75,14 @@ const AboutPage = () => {
       {/* Core Skills Section */}
       <section className={styles.section}>
         <div className={styles.sectionHeader}>
-          <h2 className={styles.sectionTitle}>Core Skills</h2>
+            <h2 className={styles.sectionTitle} style={{ textAlign: "center" }}>Core Skills</h2>
         </div>
         <div className={styles.skillsContainer}>
           <div className={styles.skillCategory}>
-            <h3 className={styles.skillCategoryTitle}>Technical Skills</h3>
+                  <h3 className={styles.skillCategoryTitle} style={{ textAlign: "center" }}>Technical Skills</h3>
+                  <p className={styles.skillCategoryDesc} style={{ textAlign: "center", marginBottom: "1.5rem", width: "75%", marginLeft: "auto", marginRight: "auto" }}>
+                I design and build secure, scalable web applications using modern frameworks and languages, and integrate emerging technologies to solve complex problems.
+              </p>
             <ul className={styles.skillsList}>
               <li className={styles.skillItem}>
                 Full-Stack Development (React, Node.js, Express, MongoDB, SQL/NoSQL)
@@ -95,9 +98,12 @@ const AboutPage = () => {
               </li>
             </ul>
           </div>
-          
+
           <div className={styles.skillCategory}>
-            <h3 className={styles.skillCategoryTitle}>Communications & Marketing</h3>
+              <h3 className={styles.skillCategoryTitle} style={{ textAlign: "center" }}>Communications & Marketing</h3>
+              <p className={styles.skillCategoryDesc} style={{ textAlign: "center", marginBottom: "1.5rem", width: "75%", marginLeft: "auto", marginRight: "auto" }}>
+                I craft compelling content, manage digital campaigns, and promote brands through strategic communications and media outreach.
+              </p>
             <ul className={styles.skillsList}>
               <li className={styles.skillItem}>Public Relations & Media Outreach</li>
               <li className={styles.skillItem}>Content Strategy & Copywriting</li>
@@ -105,41 +111,28 @@ const AboutPage = () => {
               <li className={styles.skillItem}>Event Promotion & Brand Management</li>
             </ul>
           </div>
-          
+
           <div className={styles.skillCategory}>
-            <h3 className={styles.skillCategoryTitle}>Leadership & Training</h3>
+              <h3 className={styles.skillCategoryTitle} style={{ textAlign: "center" }}>Leadership, Training & Soft Skills</h3>
+              <p className={styles.skillCategoryDesc} style={{ textAlign: "center", marginBottom: "1.5rem", width: "75%", marginLeft: "auto", marginRight: "auto" }}>
+                I lead cross-functional teams, mentor aspiring developers, and bring clarity to complex projects. My experience includes training, facilitation, and coordinating volunteer efforts to digitize community resources, reaching over 2,000 users.
+              </p>
             <ul className={styles.skillsList}>
-              <li className={styles.skillItem}>
-                Training Development & Facilitation (blockchain/web technologies)
-              </li>
+              <li className={styles.skillItem}>Training Development & Facilitation (blockchain/web technologies)</li>
               <li className={styles.skillItem}>Cross-functional Team Management</li>
               <li className={styles.skillItem}>Project Coordination & Delivery</li>
               <li className={styles.skillItem}>Strategic Community Engagement</li>
+              <li className={styles.skillItem}>Team Leadership</li>
+              <li className={styles.skillItem}>Mentoring</li>
+              <li className={styles.skillItem}>Public Speaking</li>
+              <li className={styles.skillItem}>Volunteer Coordination</li>
+              <li className={styles.skillItem}>Project Management</li>
             </ul>
           </div>
         </div>
       </section>
 
       {/* Soft Skills Section */}
-      <section className={styles.section}>
-        <div className={styles.sectionHeader}>
-          <h2 className={styles.sectionTitle}>Soft Skills & Leadership</h2>
-          <p className={styles.sectionText}>
-            I lead cross-functional teams, mentor aspiring developers, and bring
-            clarity to complex projects. For example, I coordinated a volunteer
-            team to digitize community resources, reaching over 2,000 users.
-          </p>
-        </div>
-        <div className={styles.skillsContainer}>
-          <ul className={styles.skillsList}>
-            <li className={styles.skillItem}>Team Leadership</li>
-            <li className={styles.skillItem}>Mentoring</li>
-            <li className={styles.skillItem}>Public Speaking</li>
-            <li className={styles.skillItem}>Volunteer Coordination</li>
-            <li className={styles.skillItem}>Project Management</li>
-          </ul>
-        </div>
-      </section>
 
       {/* CTA Section */}
       <section className={styles.ctaSection}>
