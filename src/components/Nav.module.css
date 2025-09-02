@@ -38,11 +38,9 @@
   display: flex;
   align-items: center;
   position: relative;
+  /* background-color: var(--foreground); */
 }
 
-.logoContainer Image{
-   color: var(--foreground);
-}
 
 .logoImage {
   height: 40px;
@@ -60,7 +58,7 @@
 .logoFallback {
   font-size: 1.5rem;
   font-weight: bold;
-  color: var(--foreground);
+  /* color: var(--background); */
   /* display: none; */
 }
 

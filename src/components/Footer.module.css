@@ -38,8 +38,16 @@
   opacity: 0.8;
 }
 
+.logoFallback {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: var(--foreground);
+  /* display: none; */
+}
+
+
 .companyDescription {
-  color: rgba(255, 255, 255, 0.7);
+  color: var(--foreground);
   font-size: 0.875rem;
   line-height: 1.5;
   margin-bottom: 1rem;
@@ -51,12 +59,12 @@
 }
 
 .socialLink {
-  color: rgba(255, 255, 255, 0.7);
+  color: var(--foreground);
   transition: color 0.3s ease;
 }
 
 .socialLink:hover {
-  color: white;
+ color: var(--foreground);
 }
 
 .socialIcon {
@@ -65,7 +73,7 @@
 }
 
 .footerSection h4 {
-  color: white;
+   color: var(--foreground);
   font-weight: 600;
   margin-bottom: 1rem;
 }
@@ -81,14 +89,14 @@
 }
 
 .footerLink {
-  color: rgba(255, 255, 255, 0.7);
+   color: var(--foreground);
   text-decoration: none;
   font-size: 0.875rem;
   transition: color 0.3s ease;
 }
 
 .footerLink:hover {
-  color: white;
+  color: var(--accent);
 }
 
 .footerDivider {
@@ -99,7 +107,7 @@
 }
 
 .copyright {
-  color: rgba(255, 255, 255, 0.6);
+   color: var(--foreground);
   font-size: 0.875rem;
 }
 

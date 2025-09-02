@@ -104,7 +104,7 @@ export default function Nav() {
           <Link href="/" className={styles.logo} onClick={closeMenu}>
             <div className={styles.logoContainer}>
                 {/* Inline SVG logo, stroke adapts to theme color */}
-                <svg
+                {/* <svg
                   className={styles.logoImage}
                   width="120"
                   height="120"
@@ -136,7 +136,7 @@ export default function Nav() {
                       fill="none"
                     />
                   </g>
-                </svg>
+                </svg> */}
               <span className={styles.logoFallback}>Larry Mwansa</span>
             </div>
           </Link>
