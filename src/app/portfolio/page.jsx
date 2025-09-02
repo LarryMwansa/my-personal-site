@@ -21,7 +21,7 @@ const PortfolioPage = () => {
           <div className={styles.projectCard} title="Click to view full project details">
             <div className={styles.imageContainer}>
               <Image
-                src="/banner.png"
+                src="/amc.png"
                 alt="Africa Music Conference website screenshot"
                 fill
                 className={styles.projectImage}
@@ -54,7 +54,7 @@ const PortfolioPage = () => {
           <div className={styles.projectCard} title="Click to view full project details">
             <div className={styles.imageContainer}>
               <Image
-                src="/b.png"
+                src="/bwanji.png"
                 alt="Digital Studio e-commerce website screenshot"
                 fill
                 className={styles.projectImage}
@@ -87,7 +87,7 @@ const PortfolioPage = () => {
           <div className={styles.projectCard} title="Click to view full project details">
             <div className={styles.imageContainer}>
               <Image
-                src="/techcon-logo.png" // Add logo to public folder if not present
+                src="/techcon.png" // Add logo to public folder if not present
                 alt="TechCon Conference Logo"
                 fill
                 className={styles.projectImage}
@@ -120,7 +120,7 @@ const PortfolioPage = () => {
           <div className={styles.projectCard} title="Click to view full project details">
             <div className={styles.imageContainer}>
               <Image
-                src="/uaba-logo.png" // Add logo to public folder if not present
+                src="/uaba.png" // Add logo to public folder if not present
                 alt="UABA Logo"
                 fill
                 className={styles.projectImage}

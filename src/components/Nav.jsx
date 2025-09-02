@@ -152,9 +152,9 @@ export default function Nav() {
             <Link href="/portfolio" className={styles.navLink}>
               Portfolio
             </Link>
-            <Link href="/blog" className={styles.navLink}>
+            {/* <Link href="/blog/coming-soon" className={styles.navLink}>
               Insights
-            </Link>
+            </Link> */}
             <Link href="/contact" className={styles.navLink}>
               Contact
             </Link>
@@ -194,9 +194,9 @@ export default function Nav() {
                 <Link href="/portfolio" className={styles.mobileNavLink} onClick={closeMenu}>
                   Portfolio
                 </Link>
-                <Link href="/blog" className={styles.mobileNavLink} onClick={closeMenu}>
+                {/* <Link href="/blog/coming-soon" className={styles.mobileNavLink} onClick={closeMenu}>
                   Insights
-                </Link>
+                </Link> */}
                 <Link href="/contact" className={styles.mobileNavLink} onClick={closeMenu}>
                   Contact
                 </Link>

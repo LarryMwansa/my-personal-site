@@ -26,15 +26,15 @@ const ContactPage = () => {
           
           <ul className={styles.contactList}>
             <li className={styles.contactListItem}>
-              <a href="mailto:your@email.com" className={styles.link}>
+              <a href="mailto:admin@bwanji.digital" className={styles.link}>
                 <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path d="M3 8L10.8906 13.2604C11.5624 13.7083 12.4376 13.7083 13.1094 13.2604L21 8M5 19H19C20.1046 19 21 18.1046 21 17V7C21 5.89543 20.1046 5 19 5H5C3.89543 5 3 5.89543 3 7V17C3 18.1046 3.89543 19 5 19Z" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
                 </svg>
-                <span>your@email.com</span>
+                <span>admin@bwanji.digital</span>
               </a>
             </li>
             <li className={styles.contactListItem}>
-              <a href="https://linkedin.com/in/yourprofile" className={styles.link} target="_blank" rel="noopener noreferrer">
+              <a href="https://www.linkedin.com/in/larry-mwansa/" className={styles.link} target="_blank" rel="noopener noreferrer">
                 <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path d="M21 8V16C21 18.7614 18.7614 21 16 21H8C5.23858 21 3 18.7614 3 16V8C3 5.23858 5.23858 3 8 3H16C18.7614 3 21 5.23858 21 8Z" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
                   <path d="M7 17V13.5V10" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
@@ -45,7 +45,7 @@ const ContactPage = () => {
               </a>
             </li>
             <li className={styles.contactListItem}>
-              <a href="https://github.com/yourusername" className={styles.link} target="_blank" rel="noopener noreferrer">
+              <a href="https://github.com/LarryMwansa" className={styles.link} target="_blank" rel="noopener noreferrer">
                 <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path d="M9 19C4.7 20.4 4.7 16.5 3 16M15 21V17.5C15 16.5 15.1 16.1 14.5 15.5C17.3 15.2 20 14.1 20 9.49995C19.9988 8.30492 19.5325 7.15726 18.7 6.29995C19.0905 5.26192 19.0545 4.11158 18.6 3.09995C18.6 3.09995 17.5 2.79995 15.6 4.09995C14.0661 3.65949 12.4339 3.65949 11 4.09995C9.1 2.79995 8 3.09995 8 3.09995C7.54548 4.11158 7.50947 5.26192 7.9 6.29995C7.06752 7.15726 6.60123 8.30492 6.6 9.49995C6.6 14.1 9.3 15.2 12.1 15.5C11.5 16.1 11.5 16.5 11.5 17.5V21" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
                 </svg>
@@ -53,12 +53,12 @@ const ContactPage = () => {
               </a>
             </li>
             <li className={styles.contactListItem}>
-              <a href="https://twitter.com/yourusername" className={styles.link} target="_blank" rel="noopener noreferrer">
+              {/* <a href="https://twitter.com/yourusername" className={styles.link} target="_blank" rel="noopener noreferrer">
                 <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path d="M22 4.00002C22 4.00002 21.3 6.10002 20 7.40002C21.6 17.4 10.6 24.7 2 19C4.2 19.1 6.4 18.4 8 17C3 15.5 0.5 9.60002 3 5.00002C5.2 7.60002 8.6 9.10002 12 9.00002C11.1 4.80002 16 2.40002 19 5.20002C20.1 5.20002 22 4.00002 22 4.00002Z" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
                 </svg>
                 <span>Twitter</span>
-              </a>
+              </a> */}
             </li>
           </ul>
         </section>

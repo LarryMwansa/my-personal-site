@@ -7,6 +7,7 @@ export default function Home() {
     <div className={styles.container}>
       {/* Hero Section */}
       <header className={styles.hero}>
+        <img src="/matt_cnbca.jpg" alt="" className={styles.heroBg} />
         <div className={styles.heroContent}>
           <h1 className={styles.heroTitle}>Bridging Technology, Community, and Impact</h1>
           <p className={styles.heroSubtitle}>
