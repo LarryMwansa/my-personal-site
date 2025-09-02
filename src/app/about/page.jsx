@@ -1,5 +1,6 @@
 import React from "react";
 import Link from "next/link";
+import Image from "next/image";
 import styles from "./about.module.css";
 
 const AboutPage = () => {
@@ -7,15 +8,25 @@ const AboutPage = () => {
     <div className={styles.container}>
       {/* Hero Section */}
       <header className={styles.hero}>
-        <div>
-          <p className={styles.eyebrow}>Meet Larry Mwansa</p>
-          <h1 className={styles.title}>My Story</h1>
-          <p className={styles.subtitle}>
-            I've built my career at the intersection of technology and community
-            impact. From developing secure web applications to leading
-            communication campaigns for local initiatives, my goal is simple:
-            create solutions that empower people and organizations.
-          </p>
+        <div className={styles.heroContent}>
+          <Image
+            src="/larry4.jpg"
+            alt="Larry Mwansa"
+            className={styles.heroImage}
+            width={120}
+            height={120}
+            priority
+          />
+          <div>
+            <p className={styles.eyebrow}>Meet Larry Mwansa</p>
+            <h1 className={styles.title}>My Story</h1>
+            <p className={styles.subtitle}>
+              I've built my career at the intersection of technology and community
+              impact. From developing secure web applications to leading
+              communication campaigns for local initiatives, my goal is simple:
+              create solutions that empower people and organizations.
+            </p>
+          </div>
         </div>
         <div className={styles.buttonGroup}>
           <Link
