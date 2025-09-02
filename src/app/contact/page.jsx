@@ -67,7 +67,32 @@ const ContactPage = () => {
         <section className={styles.formSection}>
           <h2 className={styles.sectionTitle}>Send a Message</h2>
           
-          <form className={styles.form}>
+          <form className={styles.form} onSubmit={async (e) => {
+            e.preventDefault();
+            const form = e.target;
+            const data = {
+              name: form.name.value,
+              email: form.email.value,
+              subject: form.subject.value,
+              message: form.message.value,
+            };
+            try {
+              const res = await fetch('/api/contact', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify(data),
+              });
+              const result = await res.json();
+              if (result.success) {
+                alert('Message sent successfully!');
+                form.reset();
+              } else {
+                alert('Failed to send message: ' + (result.error || 'Unknown error'));
+              }
+            } catch (err) {
+              alert('Error sending message: ' + err.message);
+            }
+          }}>
             <div className={styles.formRow}>
               <div className={styles.formGroup}>
                 <label htmlFor="name" className={styles.label}>Name</label>
