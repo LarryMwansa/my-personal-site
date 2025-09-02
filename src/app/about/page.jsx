@@ -1,11 +1,31 @@
-import React from "react";
+"use client";
+import React, { useEffect, useState } from "react";
+import ReactMarkdown from "react-markdown";
 import Link from "next/link";
 import Image from "next/image";
 import styles from "./about.module.css";
 
-const AboutPage = () => {
+export default function AboutPage() {
+  const [bios, setBios] = useState([
+    { label: "Full Bio", content: "" },
+    { label: "Conference Bio", content: "" }
+  ]);
+  const [activeTab, setActiveTab] = useState(0);
+
+  useEffect(() => {
+    Promise.all([
+      fetch("/bio_multifocal.md").then((res) => res.text()),
+      fetch("/bio_conference_ready.md").then((res) => res.text())
+    ]).then(([multi, conf]) => {
+      setBios([
+        { label: "Full Bio", content: multi },
+        { label: "Conference Bio", content: conf }
+      ]);
+    });
+  }, []);
+
   return (
-    <div className={styles.container}>
+  <div className={styles.container}>
       {/* Hero Section */}
       <header className={styles.hero}>
         <div className={styles.heroContent}>
@@ -234,8 +254,29 @@ const AboutPage = () => {
           Connect With Me
         </Link>
       </section>
+
+      {/* Tabbed Bios Section */}
+      <section className={styles.section}>
+        <h2 className={styles.sectionTitle}>Bio</h2>
+        <div className={styles.tabs}>
+          {bios.map((bio, idx) => (
+            <button
+              key={bio.label}
+              className={
+                idx === activeTab
+                  ? `${styles.tabBtn} ${styles.activeTab}`
+                  : styles.tabBtn
+              }
+              onClick={() => setActiveTab(idx)}
+            >
+              {bio.label}
+            </button>
+          ))}
+        </div>
+        <div className={styles.bioCard}>
+          <ReactMarkdown>{bios[activeTab].content}</ReactMarkdown>
+        </div>
+      </section>
     </div>
   );
-};
-
-export default AboutPage;
+}
