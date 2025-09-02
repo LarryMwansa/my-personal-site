@@ -152,15 +152,15 @@ export default function Nav() {
             <Link href="/portfolio" className={styles.navLink}>
               Portfolio
             </Link>
-            {/* <Link href="/blog/coming-soon" className={styles.navLink}>
+            <Link href="/blog" className={styles.navLink}>
               Insights
-            </Link> */}
+            </Link>
             <Link href="/contact" className={styles.navLink}>
               Contact
             </Link>
-            <Link href="/register" className={styles.getStartedBtn}>
+            {/* <Link href="/register" className={styles.getStartedBtn}>
               Get Started
-            </Link>
+            </Link> */}
             <ThemeToggle />
           </nav>
 
@@ -194,15 +194,15 @@ export default function Nav() {
                 <Link href="/portfolio" className={styles.mobileNavLink} onClick={closeMenu}>
                   Portfolio
                 </Link>
-                {/* <Link href="/blog/coming-soon" className={styles.mobileNavLink} onClick={closeMenu}>
+                <Link href="/blog" className={styles.mobileNavLink} onClick={closeMenu}>
                   Insights
-                </Link> */}
+                </Link>
                 <Link href="/contact" className={styles.mobileNavLink} onClick={closeMenu}>
                   Contact
                 </Link>
-                <Link href="/register" className={styles.mobileGetStartedBtn} onClick={closeMenu}>
+                {/* <Link href="/register" className={styles.mobileGetStartedBtn} onClick={closeMenu}>
                   Get Started
-                </Link>
+                </Link> */}
               </nav>
             </div>
           </>
