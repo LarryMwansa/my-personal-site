@@ -54,12 +54,12 @@ const ContactPage = () => {
               </a>
             </li>
             <li className={styles.contactListItem}>
-              {/* <a href="https://twitter.com/yourusername" className={styles.link} target="_blank" rel="noopener noreferrer">
+              <a href="https://wa.me/27698226285" className={styles.link} target="_blank" rel="noopener noreferrer">
                 <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M22 4.00002C22 4.00002 21.3 6.10002 20 7.40002C21.6 17.4 10.6 24.7 2 19C4.2 19.1 6.4 18.4 8 17C3 15.5 0.5 9.60002 3 5.00002C5.2 7.60002 8.6 9.10002 12 9.00002C11.1 4.80002 16 2.40002 19 5.20002C20.1 5.20002 22 4.00002 22 4.00002Z" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                  <path d="M20.52 3.48A12 12 0 1 0 2.47 20.52C3.5 21.55 4.78 22.32 6.18 22.7L6.18 22.7C7.58 23.08 9.08 23.08 10.48 22.7C11.88 22.32 13.16 21.55 14.19 20.52A12 12 0 0 0 20.52 3.48ZM12 21.5C6.21 21.5 1.5 16.79 1.5 11C1.5 5.21 6.21 0.5 12 0.5C17.79 0.5 22.5 5.21 22.5 11C22.5 16.79 17.79 21.5 12 21.5ZM17.5 8.5C17.5 8.5 16.5 8.5 15.5 9.5C14.5 10.5 13.5 12.5 13.5 12.5C13.5 12.5 12.5 13.5 11.5 13.5C10.5 13.5 9.5 12.5 9.5 12.5C9.5 12.5 8.5 10.5 7.5 9.5C6.5 8.5 5.5 8.5 5.5 8.5" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
                 </svg>
-                <span>Twitter</span>
-              </a> */}
+                <span>WhatsApp</span>
+              </a>
             </li>
           </ul>
         </section>
