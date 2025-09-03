@@ -150,26 +150,63 @@
 }
 
 .themeToggle {
-  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: 1.5rem;
 }
 
-.themeSelect {
-  appearance: none;
-  background: var(--card-bg);
-  border: 1px solid var(--card-border);
-  padding: 0.5rem 1rem;
-  border-radius: var(--radius);
-  font-size: 1rem;
-  cursor: pointer;
+.themeToggleGroup {
+  display: flex;
+  background: #e0e0e0;
+  border-radius: 999px;
+  padding: 0.08rem 0.12rem;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+  min-width: 120px;
+  height: 36px;
+}
+
+.themeToggleBtn {
+  flex: 1 1 0;
+  background: none;
+  border: none;
   outline: none;
-  min-width: 90px;
-  color: var(--foreground);
-  box-shadow: 0 2px 8px rgba(37,99,235,0.06);
+  color: #444;
+  font-size: 1.1rem;
+  padding: 0.35rem 0.5rem;
+  border-radius: 999px;
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s;
+  min-width: 36px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-.themeSelect:focus {
-  border-color: var(--accent);
-  box-shadow: 0 0 0 3px rgba(37,99,235,0.12);
+.themeToggleBtnActive {
+  background: #1abc9c;
+  color: #fff;
+  font-weight: 700;
+  box-shadow: 0 2px 8px rgba(26,188,156,0.12);
+}
+
+.themeToggleBtn:not(.themeToggleBtnActive):hover {
+  background: #d1d5db;
+  color: #222;
+}
+
+@media (prefers-color-scheme: dark) {
+  .themeToggleGroup {
+    background: #222;
+  }
+  .themeToggleBtn {
+    color: #bbb;
+  }
+  .themeToggleBtnActive {
+    background: #1abc9c;
+    color: #fff;
+  }
 }
 
 .hamburgerIcon {
