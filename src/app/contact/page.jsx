@@ -55,7 +55,7 @@ const ContactPage = () => {
             </li>
             <li className={styles.contactListItem}>
               <a href="https://wa.me/27698226285" className={styles.link} target="_blank" rel="noopener noreferrer">
-                <img src="/whatsapp.svg" alt="WhatsApp" width="20" height="20" style={{ filter: 'invert(var(--wa-invert, 0))', verticalAlign: 'middle' }} />
+                <img src="/whatsapp.svg" alt="WhatsApp" width="20" height="20" style={{ filter: 'invert(0%) brightness(0) saturate(100%)', verticalAlign: 'middle' }} />
                 <span>WhatsApp</span>
               </a>
             </li>
