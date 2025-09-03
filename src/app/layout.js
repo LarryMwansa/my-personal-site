@@ -14,8 +14,9 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata = {
-  title: "Larry Mwansa | Disruptors",
-  description: "The Scepter Movement",
+  title: "Larry Mwansa | Digital Solutions, Community Impact & Innovation",
+  description:
+    "Discover Larry Mwansa's portfolio: web development, digital strategy, and community-driven innovation. Explore projects, insights, and ways to collaborate for meaningful impact.",
 };
 
 export default function RootLayout({ children }) {
