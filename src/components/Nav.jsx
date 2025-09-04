@@ -76,7 +76,16 @@ function ThemeToggle() {
             }
             aria-pressed={theme === opt.value}
             onClick={() => handleThemeChange(opt.value)}
-            style={{ fontSize: '1.1rem', padding: '0.35rem 0.5rem', minWidth: '36px', height: '36px', display: 'flex', alignItems: 'center', justifyContent: 'center' }}
+            style={{ 
+              fontSize: '1.1rem', 
+              padding: '0.35rem 0.5rem', 
+              minWidth: '36px', 
+              height: '36px', 
+              display: 'flex', 
+              alignItems: 'center', 
+              justifyContent: 'center',
+              ...(theme === opt.value ? { backgroundColor: '#2563eb' } : {})
+            }}
           >
             {opt.label}
           </button>
