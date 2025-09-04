@@ -204,7 +204,7 @@
     color: #bbb;
   }
   .themeToggleBtnActive {
-    background: #1abc9c;
+    background: rgba(37, 99, 235, 1);
     color: #fff;
   }
 }
